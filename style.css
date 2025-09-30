@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    height: 100vh;
+}
+
+/* Nav */
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+header nav {
+    background-color: #ffffff;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 2%;
+}
+
+header nav ul li a {
+    color: #393939;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+header nav ul li a:hover {
+    color: rgba(0, 0, 0, 0.49);
+}
+
+/* Início */
+
+#inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#inicio h1 {
+    color: #0c485f;
+    font-size: 75px;
+}
+
+#inicio h2 {
+    color: #393939;
+    font-size: 35px;
+}
+
+#inicio p {
+    color: #393939;
+    font-size: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+#inicio button {
+    border-radius: 50px;
+    border: none;
+    background-color: #000;
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+    font-size: 18px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#inicio button:hover {
+    transform: scale(1.08);
+}
+
+.links {
+    margin-top: 15px;
+    display: flex;
+    gap: 14px;
+}
+
+.links a:hover i {
+    color: rgba(12, 72, 95, 0.818);
+}
+
+.links i {
+    font-size: 40px;
+    color: #0c485f;
+    width: 40px;
+    transition: all 0.3s;
+}
+
+#inicio .bloco-img img {
+    width: 500px;
+}
+
+/* Sobre */
+
+#sobre {
+    background-color: #0c485f;
+}
+
+#sobre h2 {
+    color: white;
+    font-size: 50px;
+}
+
+/* Projetos */

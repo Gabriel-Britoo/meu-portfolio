@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Serif+Old+Uyghur&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-…(hash)…" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div>
+                <h1>Olá,</h1>
+                <h2>me chamo Gabriel Reis</h2>
+                <p>Faço programa e programo, também sei design, CSS é bem legal e bonito, morte ao PHP, dev.log ON TOP!
+                </p>
+                <a href="#sobre"><button>Sobre mim <i class="fa-solid fa-arrow-right"></i></button></a>
+                <div class="links">
+                    <a href="https://github.com/Gabriel-Britoo" target="_blank"><i
+                            class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gabriel-brito-6b57532b7/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/ggabzx._/" target="_blank"><i
+                            class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrito343@gmail.com" target="_blank"><i
+                            class="fa-solid fa-square-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="bloco-img">
+                <img src="img/ChikenLittle.png" alt="">
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+        </section>
+
+        <section id="projetos">
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+<script>
+    $('nav a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href'),
+            targetOffset = $(id).offset().top;
+
+        $('html, body').animate({
+            scrollTop: targetOffset - 50
+        }, 500);
+    });
+
+    $(window).on('scroll', function (e) {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() != 0) {
+            $('header').css({
+                'box-shadow': '0 2px 4px rgba(0, 0, 0, 0.1)',
+                'transition': 'box-shadow 0.3s ease'
+            });
+        } else {
+            $('header').css({
+                'box-shadow': 'none'
+            })
+        }
+
+        if ($(window).scrollTop() > 500 && $(window).scrollTop() < 1000) {
+            $('#sobre').css({
+                'border-radius': '20px',
+                'margin': '10px 30px',
+                'transition': 'all 0.5s ease'
+            });
+        } else {
+            $('#sobre').css({
+                'border-radius': '0',
+                'margin': '0'
+            });
+        }
+    });
+</script>
+
+</html>
