@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-…(hash)…" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Document</title>
+    <title>Portfolio - Gabriel Reis</title>
 </head>
 
 <body>
     <header>
         <nav>
+            <h3>Gabriel <p>Reis</p></h3>
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -31,10 +32,9 @@
         <section id="inicio">
             <div>
                 <h1>Olá,</h1>
-                <h2>me chamo Gabriel Reis</h2>
-                <p>Faço programa e programo, também sei design, CSS é bem legal e bonito, morte ao PHP, dev.log ON TOP!
-                </p>
-                <a href="#sobre"><button>Sobre mim <i class="fa-solid fa-arrow-right"></i></button></a>
+                <h2>me chamo <p>Gabriel Reis</p></h2>
+                <p id="sub">Desenvolvedor Full-Stack especializado em aplicações web.</p>
+                <a href="#sobre"><button onclick="sobreButton()">Sobre mim <i class="fa-solid fa-arrow-right"></i></button></a>
                 <div class="links">
                     <a href="https://github.com/Gabriel-Britoo" target="_blank"><i
                             class="fa-brands fa-square-github"></i></a>
@@ -48,17 +48,81 @@
             </div>
 
             <div class="bloco-img">
-                <img src="img/ChikenLittle.png" alt="">
+                <img src="img/foto.png" alt="">
             </div>
         </section>
 
         <section id="sobre">
             <h2>Sobre mim</h2>
+            <p>Olá! Me chamo Gabriel Reis e sou um Desenvolvedor Full-Stack apaixonado por criar soluções web modernas e
+                eficientes. Tenho experiência com HTML, CSS, JavaScript, React, Node.js, entre outras tecnologias.</p>
+
+            <h3>Habilidades</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript, React</li>
+                <li>Bancos de Dados: MySQL, Firebase</li>
+                <li>Versionamento: Git e GitHub</li>
+            </ul>
+
+            <h3>Experiência / Projetos</h3>
+            <p>Já trabalhei em projetos de aplicações web complexas com integração
+                de APIs e dashboards interativos.</p>
         </section>
+
 
         <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="cards-projetos">
+                <!-- Projeto 1 -->
+                <div class="card-projeto">
+                    <h3>Portal Essência Azul</h3>
+                    <p>Site desenvolvido para uma ONG que apoia crianças autistas, com foco em acessibilidade e design
+                        amigável.</p>
+                    <a href="#" class="btn-projeto">Ver projeto</a>
+                </div>
 
+                <!-- Projeto 2 -->
+                <div class="card-projeto">
+                    <h3>Syncro</h3>
+                    <p>Aplicativo de bate-papo, permitindo conversas em tempo real com recursos de mensagens privadas e
+                        grupos.</p>
+                    <a href="#" class="btn-projeto">Ver projeto</a>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="card-projeto">
+                    <h3>História na Web</h3>
+                    <p>Site educativo com conteúdos de história, organizado de forma interativa e visualmente atraente
+                        para estudantes.</p>
+                    <a href="#" class="btn-projeto">Ver projeto</a>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="card-projeto">
+                    <h3>Invest</h3>
+                    <p>Website para controle financeiro pessoal, ajudando a organizar receitas, despesas e planejar 
+                        orçamentos.</p>
+                    <a href="#" class="btn-projeto">Ver projeto</a>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="card-projeto">
+                    <h3>YouSafe</h3>
+                    <p>Plataforma que apresenta um sistema de alarme inteligente desenvolvido com Arduino, explicando 
+                        seu funcionamento e recursos.</p>
+                    <a href="#" class="btn-projeto">Ver projeto</a>
+                </div>
+
+                <!-- Projeto 6 -->
+                <div class="card-projeto">
+                    <h3>HostCenter</h3>
+                    <p>Plataforma para reserva de quartos de hotel, oferecendo um jeito seguro e prática para consultar 
+                        as melhores opções.</p>
+                    <a href="#" class="btn-projeto">Ver projeto</a>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer>
@@ -67,6 +131,11 @@
 </body>
 
 <script>
+
+    function sobreButton() {
+        document.getElementById("sobre").scrollIntoView({ behavior: 'smooth' });
+    }
+
     $('nav a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         var id = $(this).attr('href'),
