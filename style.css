@@ -14,6 +14,7 @@ section {
 header {
     position: fixed;
     width: 100%;
+    z-index: 99;
 }
 
 header nav {
@@ -194,3 +195,77 @@ header nav ul li a:hover {
 
 /* Projetos */
 
+#projetos h2 {
+    text-align: center;
+    color: #0c485f;
+    font-size: 50px;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+.cards-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: auto;
+}
+
+.card-projeto {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.3s;
+    margin: 15px;
+    width: 350px;
+    align-self: center;
+    justify-self: center;
+}
+
+.card-projeto:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-projeto:hover .btn-projeto {
+    background-color: #09769a;
+}
+
+.img-projeto {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.card-projeto h3 {
+    color: #0c485f;
+    margin: 15px 0;
+}
+
+.card-projeto p {
+    color: #696969;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-align: justify;
+    width: 90%;
+    justify-self: center;
+}
+
+.btn-projeto {
+    border-radius: 50px;
+    border: none;
+    background-color: #000;
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-projeto:hover {
+    transform: scale(1.08);
+}

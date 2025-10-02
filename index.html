@@ -34,7 +34,7 @@
                 <h1>Olá,</h1>
                 <h2>me chamo <p>Gabriel Reis</p></h2>
                 <p id="sub">Desenvolvedor Full-Stack especializado em aplicações web.</p>
-                <a href="#sobre"><button onclick="sobreButton()">Sobre mim <i class="fa-solid fa-arrow-right"></i></button></a>
+                <a href="#sobre"><button>Sobre mim <i class="fa-solid fa-arrow-right"></i></button></a>
                 <div class="links">
                     <a href="https://github.com/Gabriel-Britoo" target="_blank"><i
                             class="fa-brands fa-square-github"></i></a>
@@ -75,50 +75,56 @@
             <div class="cards-projetos">
                 <!-- Projeto 1 -->
                 <div class="card-projeto">
+                    <img src="img/essazul.jpeg" alt="" class="img-projeto">
                     <h3>Portal Essência Azul</h3>
                     <p>Site desenvolvido para uma ONG que apoia crianças autistas, com foco em acessibilidade e design
                         amigável.</p>
-                    <a href="#" class="btn-projeto">Ver projeto</a>
+                    <a><button class="btn-projeto">Ver projeto</button></a>
                 </div>
 
                 <!-- Projeto 2 -->
                 <div class="card-projeto">
+                    <img src="img/syncro.jpeg" alt="" class="img-projeto">
                     <h3>Syncro</h3>
                     <p>Aplicativo de bate-papo, permitindo conversas em tempo real com recursos de mensagens privadas e
                         grupos.</p>
-                    <a href="#" class="btn-projeto">Ver projeto</a>
+                    <a><button class="btn-projeto">Ver projeto</button></a>
                 </div>
 
                 <!-- Projeto 3 -->
                 <div class="card-projeto">
+                    <img src="img/histweb.jpeg" alt="" class="img-projeto">
                     <h3>História na Web</h3>
                     <p>Site educativo com conteúdos de história, organizado de forma interativa e visualmente atraente
                         para estudantes.</p>
-                    <a href="#" class="btn-projeto">Ver projeto</a>
+                    <a><button class="btn-projeto">Ver projeto</button></a>
                 </div>
 
                 <!-- Projeto 4 -->
                 <div class="card-projeto">
+                    <img src="img/invest.jpeg" alt="" class="img-projeto">
                     <h3>Invest</h3>
                     <p>Website para controle financeiro pessoal, ajudando a organizar receitas, despesas e planejar 
                         orçamentos.</p>
-                    <a href="#" class="btn-projeto">Ver projeto</a>
+                    <a><button class="btn-projeto">Ver projeto</button></a>
                 </div>
 
                 <!-- Projeto 5 -->
                 <div class="card-projeto">
+                    <img src="img/yousafe.jpeg" alt="" class="img-projeto">
                     <h3>YouSafe</h3>
                     <p>Plataforma que apresenta um sistema de alarme inteligente desenvolvido com Arduino, explicando 
                         seu funcionamento e recursos.</p>
-                    <a href="#" class="btn-projeto">Ver projeto</a>
+                    <a><button class="btn-projeto">Ver projeto</button></a>
                 </div>
 
                 <!-- Projeto 6 -->
                 <div class="card-projeto">
+                    <img src="img/hcenter.jpeg" alt="" class="img-projeto">
                     <h3>HostCenter</h3>
                     <p>Plataforma para reserva de quartos de hotel, oferecendo um jeito seguro e prática para consultar 
                         as melhores opções.</p>
-                    <a href="#" class="btn-projeto">Ver projeto</a>
+                    <a><button class="btn-projeto">Ver projeto</button></a>
                 </div>
             </div>
         </section>
@@ -132,10 +138,6 @@
 
 <script>
 
-    function sobreButton() {
-        document.getElementById("sobre").scrollIntoView({ behavior: 'smooth' });
-    }
-
     $('nav a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         var id = $(this).attr('href'),
@@ -147,7 +149,6 @@
     });
 
     $(window).on('scroll', function (e) {
-        console.log($(window).scrollTop());
         if ($(window).scrollTop() != 0) {
             $('header').css({
                 'box-shadow': '0 2px 4px rgba(0, 0, 0, 0.1)',
