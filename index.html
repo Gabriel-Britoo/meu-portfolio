@@ -30,7 +30,7 @@
 
     <main>
         <section id="inicio">
-            <div>
+            <div id="info-inicio">
                 <h1>Olá,</h1>
                 <h2>me chamo <p>Gabriel Reis</p></h2>
                 <p id="sub">Desenvolvedor Full-Stack especializado em aplicações web.</p>
@@ -138,6 +138,16 @@
 
 <script>
 
+    $('#info-inicio a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var botaoid = $(this).attr('href'),
+            targetOffset = $(botaoid).offset().top;
+
+        $('html, body').animate({
+            scrollTop: targetOffset - 50
+        }, 500);
+    });
+
     $('nav a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         var id = $(this).attr('href'),
@@ -152,11 +162,13 @@
         if ($(window).scrollTop() != 0) {
             $('header').css({
                 'box-shadow': '0 2px 4px rgba(0, 0, 0, 0.1)',
-                'transition': 'box-shadow 0.3s ease'
+                'background-color': '#fff',
+                'transition': 'all 0.3s ease'
             });
         } else {
             $('header').css({
-                'box-shadow': 'none'
+                'box-shadow': 'none',
+                'background-color': '#ffffff00'
             })
         }
 
@@ -170,6 +182,19 @@
             $('#sobre').css({
                 'border-radius': '0',
                 'margin': '0'
+            });
+        }
+
+        if ($(window).scrollTop() > 1300) {
+            $('header').css({
+                'background-color': '#0c485f'
+            });
+            $('li a, nav h3').css({
+                'color': '#fff'
+            });
+        } else {
+            $('li a, nav h3').css({
+                'color': '#393939'
             });
         }
     });

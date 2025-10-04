@@ -15,10 +15,10 @@ header {
     position: fixed;
     width: 100%;
     z-index: 99;
+    background-color: #ffffff;
 }
 
 header nav {
-    background-color: #ffffff;
     color: white;
     padding: 15px 0;
     width: 100%;
@@ -36,7 +36,7 @@ header nav h3 {
 }
 
 header nav h3 p {
-    color: #09769a;
+    color: #12abb6;
 }
 
 header nav ul {
@@ -223,12 +223,7 @@ header nav ul li a:hover {
     justify-self: center;
 }
 
-.card-projeto:hover {
-    transform: scale(1.05);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.card-projeto:hover .btn-projeto {
+.btn-projeto:hover {
     background-color: #09769a;
 }
 
